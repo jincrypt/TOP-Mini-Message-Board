@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    header
+        h1 New Message
+    main
+        
+        form(method='POST' action='/new')
+            div.mb-3
+                label.form-label(for='user') Author
+                input.form-control(type='text', placeholder='Your Name', name='user', id='user' required)
+            div.mb-3
+                label.form-label(for='message') Message
+                input.form-control(type='text', placeholder='Type New Message Here', name='message', id='message' required)
+            button.btn.btn-primary(type="submit") Submit
